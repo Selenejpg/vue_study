@@ -21,3 +21,6 @@ es ternario abbreviato
 ```
 <h1> {{msg || 'Welcome'}} </h1>
 ```
+
+Reactive reference
+Per non creare elementi statici si usano delle reactive reference che permettono di manipolare, aggiungere e rimuovere oggetti in modo dinamico. Nel nostro progetto abbiamo dichiarato la variabile items. Abbiamo assegnato una reactive reference grazie a ref(). All'interno vi è un array di tutti i nostri oggetti. Dopodichè abbiamo creato un v-for per creare un loop degli oggetti. Quando dichiariamo un v-for deve sempre essere presente la key che si associa ad ogni elemento ciclato dal v-for. Non è sempre obbligatorio, ma è good practice inserirla sempre. All'interno della variabile dichiarato un id per ogni oggetto all'interno della reactive reference. Una delle cose positive di Vue è che si aggiorna automaticamente. Se rimuovessimo un elemento dalla lista, vue percepisce il cambiamento e lo rimuoverebbe automaticamente
