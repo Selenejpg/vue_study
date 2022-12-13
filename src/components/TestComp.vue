@@ -1,14 +1,13 @@
 <template>
   <div>
-    hello world
+    <h1>{{header}}</h1>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'TestComp',
+<script setup>
+import { ref } from 'vue'
 
-}
+const header = ref('Shopping List App')
 </script>
 
 

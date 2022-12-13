@@ -1,24 +1,23 @@
-# vue_study
+Vue's templating syntax: run JavaScript expressions directly in the template.
 
-## Project setup
+V-Model permette di tenere d'occhio automaticamente i cambiamenti senza utilizzare degli event listener. I cambiamenti sono automaticamente percepiti da vue cosicchè il testo si aggiorna automaticamente in base al valore inserito nell'input
 ```
-npm install
+<h1> {{msg}} </h1>
+<input v-model="msg" type="text" />
 ```
-
-### Compiles and hot-reloads for development
+All'interno dei baffi è possibile aggiungere metodi JS. Per rendere tutto maiuscolo, infatti basta aggiungere .toLocaleUpperCase()
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+<h1> {{msg.toLocaleUpperCase()}} </h1>
 ```
 
-### Lints and fixes files
+All'interno dei baffi è possibile valutare una sola espressione alla volta, se si aggiungono due espressioni si va incontro ad un parsing error, unexpected token. Non è inoltre possibile dichiarare nuove variabili e aggiungere condizioni if o simili (evaluating statements). E' possibile invece aggiungere ternari, anche accorciati grazie all'operatore or
+
+es ternario
 ```
-npm run lint
+<h1> {{msg ? msg : 'Welcome'}} </h1>
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+es ternario abbreviato
+```
+<h1> {{msg || 'Welcome'}} </h1>
+```
